@@ -8,10 +8,18 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export abstract class IQuery {
-    abstract sayHello(name?: Nullable<string>): string | Promise<string>;
+export abstract class IMutation {
+    __typename?: 'IMutation';
 
-    abstract meet(name?: Nullable<string>): string | Promise<string>;
+    abstract changeName(name: string): string | Promise<string>;
+}
+
+export abstract class IQuery {
+    __typename?: 'IQuery';
+
+    abstract meet(name: string): string | Promise<string>;
+
+    abstract sayHello(name: string): string | Promise<string>;
 }
 
 type Nullable<T> = T | null;

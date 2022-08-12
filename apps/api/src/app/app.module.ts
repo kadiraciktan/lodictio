@@ -7,22 +7,24 @@ import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 
 @Module({
   imports: [
-    GraphQLModule.forRoot<ApolloDriverConfig>({
+    GraphQLModule.forRootAsync<ApolloDriverConfig>({
       driver: ApolloDriver,
-      typePaths: ['apps/api/src/graphql/*.graphql'],
-      autoSchemaFile: join(
-        process.cwd(),
-        'apps/api/src/graphql/schema.graphql'
-      ),
-      definitions: {
-        path: join(process.cwd(), 'apps/api/src/graphql/graphql.ts'),
-        outputAs: 'class',
-        emitTypenameField: true,
-      },
-      debug: true,
-      playground: false,
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      sortSchema: true,
+      useFactory: async () => ({
+        typePaths: ['apps/api/src/graphql/*.graphql'],
+        autoSchemaFile: join(
+          process.cwd(),
+          'apps/api/src/graphql/schema.graphql'
+        ),
+        definitions: {
+          path: join(process.cwd(), 'apps/api/src/graphql/graphql.ts'),
+          outputAs: 'class',
+          emitTypenameField: true,
+        },
+        debug: true,
+        playground: false,
+        plugins: [ApolloServerPluginLandingPageLocalDefault()],
+        sortSchema: true,
+      }),
     }),
   ],
   controllers: [],

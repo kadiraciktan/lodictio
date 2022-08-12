@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lodictio/main-database": ["libs/main-database/src/index.ts"],
       "@lodictio/models": ["libs/models/src/index.ts"]
     }
   },

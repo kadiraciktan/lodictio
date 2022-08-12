@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "typeorm": "typeorm-ts-node-commonjs"
   },
   "private": true,
   "dependencies": {

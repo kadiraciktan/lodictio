@@ -1,9 +1,3 @@
-import styled from 'styled-components';
-
-const StyledPage = styled.div`
-  .page {
-  }
-`;
 
 export function Index() {
   /*
@@ -12,18 +6,14 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.styled-components file.
    */
   return (
-    <StyledPage>
-      <div className="wrapper">
-        <div className="container">
-          <div id="welcome">
-            <h1>
-              <span> Hello there, </span>
-              Welcome app 👋
-            </h1>
-          </div>
+    <div className="wrapper">
+      <div className="container">
+        <div id="welcome">
+        <div className="bg-indigo-500 p-2 font-mono">Hello!</div>
+
         </div>
       </div>
-    </StyledPage>
+    </div>
   );
 }
 

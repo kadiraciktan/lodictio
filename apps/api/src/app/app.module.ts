@@ -23,7 +23,11 @@ import { resolvers } from './resolvers/resolvers';
         },
         debug: true,
         playground: false,
-        plugins: [ApolloServerPluginLandingPageLocalDefault()],
+        plugins: [
+          ApolloServerPluginLandingPageLocalDefault({
+            embed: true,
+          }),
+        ],
         sortSchema: true,
       }),
     }),

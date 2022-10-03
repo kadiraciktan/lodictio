@@ -1,0 +1,16 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  """This Method Change the name of the user"""
+  changeName(
+    """The user name"""
+    name: String!
+  ): String!
+}
+
+type Query {
+  meet(name: String!): String!
+  sayHello(name: String!): String!
+}

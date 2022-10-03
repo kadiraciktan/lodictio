@@ -3,7 +3,7 @@ import { DataSource } from 'typeorm';
 export const postgresDataSource = new DataSource({
   type: 'postgres',
   host: 'localhost',
-  port: 5432,
+  port: 15432,
   username: 'lodictio-main-db-user',
   password: '123456',
   database: 'lodictio-main-db',

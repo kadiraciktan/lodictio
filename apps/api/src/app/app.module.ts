@@ -14,7 +14,7 @@ import { resolvers } from './resolvers/resolvers';
         typePaths: ['apps/api/src/app/graphql/*.graphql'],
         autoSchemaFile: join(
           process.cwd(),
-          'apps/api/src/app/graphql/schema.graphql'
+          'apps/api/src/app/graphql/schema.gql'
         ),
         definitions: {
           path: join(process.cwd(), 'apps/api/src/app/graphql/graphql.ts'),
@@ -35,8 +35,8 @@ import { resolvers } from './resolvers/resolvers';
     TypeOrmModule.forRootAsync({
       useFactory: async () => ({
         type: 'postgres',
-        host: '127.0.0.1',
-        port: 5432,
+        host: process.env.TYPEORM_HOST || '33.33.0.8',
+        port: parseInt(process.env.TYPEORM_PORT, 10) || 5432,
         username: 'lodictio-main-db-user',
         password: '123456',
         database: 'lodictio-main-db',

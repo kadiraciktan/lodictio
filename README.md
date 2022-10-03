@@ -1,7 +1,6 @@
 > # Lodictio
 
 ### This Project Includes : 
-- [Angular](https://angular.io/start) 
 - [Nx](https://nx.dev/getting-started/intro)  
 - [PostgreSQL](https://www.postgresql.org/docs/)
 - [Docker](https://docs.docker.com/)

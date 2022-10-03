@@ -12,5 +12,5 @@
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [Figma](https://www.figma.com/)
 
-Base Components : 
+Atoms : 
 ![Figma Base Components](https://user-images.githubusercontent.com/17720668/193667240-b5197ef3-8bce-4c08-ace0-57e3755406f2.png)

@@ -15,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+    "@mui/base": "^5.0.0-alpha.100",
     "@nestjs/apollo": "^10.0.19",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",

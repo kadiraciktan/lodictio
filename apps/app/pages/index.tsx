@@ -1,3 +1,4 @@
+import { PostCardComponent } from '../components';
 
 export function Index() {
   /*
@@ -6,12 +7,17 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.styled-components file.
    */
   return (
-    <div className="wrapper">
-      <div className="container">
-        <div id="welcome">
-        <div className="bg-indigo-500 p-2 font-mono">Hello!</div>
-
+    <div className="wrapper bg-slate-50">
+      <div className="flex flex-row">
+        <div className="basis-4/12"></div>
+        <div className="basis-4/12">
+          <div className="flex flex-col items-center">
+            <PostCardComponent></PostCardComponent>
+            <PostCardComponent></PostCardComponent>
+            <PostCardComponent></PostCardComponent>
+          </div>
         </div>
+        <div className="basis-4/12"></div>
       </div>
     </div>
   );

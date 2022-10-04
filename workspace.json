@@ -5,6 +5,7 @@
     "api": "apps/api",
     "app": "apps/app",
     "app-e2e": "apps/app-e2e",
+    "graphql": "libs/graphql",
     "main-database": "libs/main-database",
     "models": "libs/models"
   }

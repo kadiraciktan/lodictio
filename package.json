@@ -11,7 +11,8 @@
     "migration:create": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli migration:create ./libs/main-database/src/migrations/$npm_config_name",
     "migration:generate": "nx build main-database && npm run typeorm -- migration:generate ./libs/main-database/src/migrations/$npm_config_name",
     "migration:run": "nx build main-database && npm run typeorm -- migration:run",
-    "migration:revert": "npm run typeorm -- migration:revert"
+    "migration:revert": "npm run typeorm -- migration:revert",
+    "gql": "npx graphql-codegen --config apps/api/codegen.yml"
   },
   "private": true,
   "dependencies": {
@@ -32,8 +33,9 @@
     "apollo-server-core": "^3.10.1",
     "apollo-server-express": "^3.10.1",
     "autoprefixer": "^10.4.8",
+    "axios": "^1.0.0",
     "core-js": "^3.6.5",
-    "graphql": "^16.5.0",
+    "graphql": "^16.6.0",
     "graphql-tools": "^8.3.3",
     "next": "^12.3.1",
     "pg": "^8.8.0",
@@ -52,6 +54,12 @@
     "ws": "^8.8.1"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.13.3",
+    "@graphql-codegen/graphql-modules-preset": "^2.5.1",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.3",
+    "@graphql-codegen/typescript-resolvers": "^2.7.3",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
     "@nrwl/cli": "14.5.4",

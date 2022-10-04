@@ -1,0 +1,13 @@
+overwrite: true
+schema: 'http://localhost:3000/graphql'
+generates:
+  libs/graphql/src/react-graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      apolloAngularVersion: 1
+      serviceName: 'GraphqlService'
+      dedupeOperationSuffix: true
+      declarationKind: 'class'

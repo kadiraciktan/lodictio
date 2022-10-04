@@ -1,8 +1,14 @@
 overwrite: true
 schema: 'http://localhost:3000/graphql'
+documents:
+  - 'http://localhost:3000/graphql':
+      loader: ./libs/graphql/operations-from-schema.graphql.js
 generates:
   libs/graphql/src/react-graphql.ts:
     plugins:
       - typescript
       - typescript-operations
       - typescript-react-apollo
+    config:
+      dedupeOperationSuffix: true
+      dedupeFragments: true

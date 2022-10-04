@@ -11,7 +11,7 @@ import { resolvers } from './resolvers/resolvers';
     GraphQLModule.forRootAsync<ApolloDriverConfig>({
       driver: ApolloDriver,
       useFactory: async () => ({
-        typePaths: ['apps/api/src/app/graphql/*.graphql'],
+        typePaths: ['apps/api/src/app/graphql/*.gql'],
         autoSchemaFile: join(
           process.cwd(),
           'apps/api/src/app/graphql/schema.gql'
